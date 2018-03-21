@@ -24,7 +24,7 @@ namespace MultiThreading
         {
             for(int i = 0; i < 10; i++)
             {
-                Console.WriteLine("Function 1 excuted " + i.ToString());
+                Console.WriteLine("Function i excuted " + i.ToString());
                 Thread.Sleep(4000);
             }
         }
