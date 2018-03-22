@@ -6,12 +6,12 @@ using System.Threading;
 
 namespace MultiThreading
 {
-    class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
-            Thread obj1 = new Thread(Function1);
-            Thread obj2 = new Thread(Function2);
+            Thread obj1 = new Thread(ThreadProgram.Function1);
+            Thread obj2 = new Thread(ThreadProgram.Function2);
             obj1.IsBackground = true;
             obj2.IsBackground = true;
             obj1.Start();
@@ -20,21 +20,21 @@ namespace MultiThreading
         }
     }
 
-    class ThreadProgram
+    public class ThreadProgram
     {
-        static void Function1()
+        public static void Function1()
         {
             for (int i = 0; i <= 10; i++)
             {
-                Console.WriteLine("Function i excuted " + i.ToString());
+                Console.WriteLine("Function1 i excuted " + i.ToString());
             }
         }
 
-        static void Function2()
+        public static void Function2()
         {
             for (int j = 0; j <= 10; j++)
             {
-                Console.WriteLine("Function j excuted " + j.ToString());
+                Console.WriteLine("Function2 j excuted " + j.ToString());
             }
         }
     }
